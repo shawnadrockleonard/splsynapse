@@ -15,7 +15,7 @@
 			"interval": 120,
 			"startTime": "2025-07-10T22:49:00Z",
 			"delay": "00:00:00",
-			"maxConcurrency": 50,
+			"maxConcurrency": 1,
 			"retryPolicy": {
 				"intervalInSeconds": 30
 			},
