@@ -98,6 +98,69 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('workspaceName'), '/Trigger 1')]",
+			"type": "Microsoft.Synapse/workspaces/triggers",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipeline": {
+					"pipelineReference": {
+						"referenceName": "PipelineTest",
+						"type": "PipelineReference"
+					},
+					"parameters": {}
+				},
+				"type": "TumblingWindowTrigger",
+				"typeProperties": {
+					"frequency": "Minute",
+					"interval": 120,
+					"startTime": "2025-07-10T22:49:00Z",
+					"delay": "00:00:00",
+					"maxConcurrency": 1,
+					"retryPolicy": {
+						"intervalInSeconds": 30
+					},
+					"dependsOn": []
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/pipelines/PipelineTest')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/TriggerTumb120')]",
+			"type": "Microsoft.Synapse/workspaces/triggers",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"description": "desc",
+				"annotations": [],
+				"runtimeState": "Stopped",
+				"pipeline": {
+					"pipelineReference": {
+						"referenceName": "PipelineTest",
+						"type": "PipelineReference"
+					},
+					"parameters": {}
+				},
+				"type": "TumblingWindowTrigger",
+				"typeProperties": {
+					"frequency": "Hour",
+					"interval": 1,
+					"startTime": "2025-06-16T00:00:00Z",
+					"delay": "00:00:00",
+					"maxConcurrency": 1,
+					"retryPolicy": {
+						"intervalInSeconds": 30
+					},
+					"dependsOn": []
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/pipelines/PipelineTest')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('workspaceName'), '/AutoResolveIntegrationRuntime')]",
 			"type": "Microsoft.Synapse/workspaces/integrationRuntimes",
 			"apiVersion": "2019-06-01-preview",
@@ -179,38 +242,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('workspaceId'), '/managedVirtualNetworks/default')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('workspaceName'), '/TriggerTumb120')]",
-			"type": "Microsoft.Synapse/workspaces/triggers",
-			"apiVersion": "2019-06-01-preview",
-			"properties": {
-				"description": "desc",
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipeline": {
-					"pipelineReference": {
-						"referenceName": "PipelineTest",
-						"type": "PipelineReference"
-					},
-					"parameters": {}
-				},
-				"type": "TumblingWindowTrigger",
-				"typeProperties": {
-					"frequency": "Hour",
-					"interval": 1,
-					"startTime": "2025-06-16T00:00:00Z",
-					"delay": "00:00:00",
-					"maxConcurrency": 50,
-					"retryPolicy": {
-						"intervalInSeconds": 30
-					},
-					"dependsOn": []
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('workspaceId'), '/pipelines/PipelineTest')]"
 			]
 		}
 	]
