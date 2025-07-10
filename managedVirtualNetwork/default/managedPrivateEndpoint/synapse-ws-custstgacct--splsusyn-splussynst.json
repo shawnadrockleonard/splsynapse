@@ -1,0 +1,7 @@
+{
+	"name": "synapse-ws-custstgacct--splsusyn-splussynst",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/c34c5870-614a-409f-b1b9-690f1fb3d98e/resourceGroups/splsynapse/providers/Microsoft.Storage/storageAccounts/splussynst",
+		"groupId": "dfs"
+	}
+}

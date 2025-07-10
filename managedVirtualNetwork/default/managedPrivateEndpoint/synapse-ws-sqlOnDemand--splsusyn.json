@@ -1,0 +1,10 @@
+{
+	"name": "synapse-ws-sqlOnDemand--splsusyn",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/c34c5870-614a-409f-b1b9-690f1fb3d98e/resourceGroups/splsynapse/providers/Microsoft.Synapse/workspaces/splsusyn",
+		"groupId": "sqlOnDemand",
+		"fqdns": [
+			"splsusyn-ondemand.473a9b59-cfd2-4d06-885b-dafa6f848564.sql.azuresynapse.net"
+		]
+	}
+}
