@@ -1,0 +1,17 @@
+{
+	"name": "TriggerTumbling120",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 120,
+				"startTime": "2025-06-18T18:00:00",
+				"timeZone": "UTC-11"
+			}
+		}
+	}
+}
