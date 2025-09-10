@@ -1,7 +1,9 @@
 {
 	"name": "Trigger 3",
 	"properties": {
-		"annotations": [],
+		"annotations": [
+			"tags"
+		],
 		"runtimeState": "Stopped",
 		"pipelines": [],
 		"type": "ScheduleTrigger",
@@ -10,6 +12,7 @@
 				"frequency": "Minute",
 				"interval": 15,
 				"startTime": "2025-09-10T01:58:00",
+				"endTime": "2025-09-11T01:59:23",
 				"timeZone": "Mountain Standard Time"
 			}
 		}
